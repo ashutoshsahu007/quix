@@ -5,18 +5,18 @@ const Bottom = () => {
   return (
     <div className={classes.bottom}>
       <div>
-        <p>Quizard © Copyright 2024 . All rights reserved.</p>
+        <p style={{ color: "white" }}>
+          Quizard © Copyright 2024 . All rights reserved.
+        </p>
       </div>
       <div>
-       
-          <ul className={classes.list}>
+        <ul className={classes.list}>
           <li> About Us</li>
           <li> Contact Us</li>
           <li>Privacy & Cookies Policy</li>
           <li> Terms and Conditions</li>
           <li> Disclaimer</li>
-          </ul>
-        
+        </ul>
       </div>
     </div>
   );

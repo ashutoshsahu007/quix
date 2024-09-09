@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Header.module.css"
+import classes from "./Header.module.css";
 
 const Header = () => {
   return (
@@ -9,12 +9,12 @@ const Header = () => {
       </div>
       <div className={classes.headerlist}>
         <ul className={classes.list}>
-        <li>Live Quiz</li>
-        <li>Grade 7</li>
-        <li>Login</li>
-        <li>Register</li>
+          <li>Live Quiz</li>
+          <li>Profile</li>
+          <li>Grade 7</li>
+          <li>Login</li>
+          <li>Register</li>
         </ul>
-       
       </div>
     </div>
   );

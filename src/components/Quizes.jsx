@@ -4,7 +4,11 @@ import classes from "./Quizes.module.css";
 const Quizes = () => {
   return (
     <div className={classes.quiz}>
-      <img src="ScienceQuiz.png" alt="not allowed" />
+      <img
+        src="ScienceQuiz.png"
+        alt="not allowed"
+        style={{ width: "256px", height: "160px" }}
+      />
     </div>
   );
 };

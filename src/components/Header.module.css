@@ -11,4 +11,9 @@
 .list {
   display: flex;
   justify-content: space-evenly;
+  list-style: none;
+  gap: 20px;
+  color: rgb(230, 230, 131);
+  font-size: 25px;
+  font-weight: 500;
 }
