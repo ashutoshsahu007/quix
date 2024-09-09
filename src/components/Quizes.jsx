@@ -3,7 +3,7 @@ import classes from "./Quizes.module.css";
 
 const Quizes = () => {
   return (
-    <div className={classes.quiz}>
+    <div className={classes.quizes}>
       <img
         src="ScienceQuiz.png"
         alt="not allowed"

@@ -7,7 +7,7 @@ import Quiz from "./components/Quiz";
 
 const App = () => {
   return (
-    <div className="text-black">
+    <div className="text-black" style={{ position: "relative" }}>
       <Header />
       <Body />
       <Bottom />

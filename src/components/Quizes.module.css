@@ -1,8 +1,4 @@
-.quiz {
+.quizes {
   border: 1px solid black;
-}
-
-.img {
-  width: "100px" !important;
-  height: "100px" !important;
+  display: flex;
 }

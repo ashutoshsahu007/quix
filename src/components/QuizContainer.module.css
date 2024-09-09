@@ -1,5 +1,8 @@
 .quizes {
+  padding-top: 60px;
 }
 
 .quizlist {
+  display: flex;
+  gap: 20px;
 }
