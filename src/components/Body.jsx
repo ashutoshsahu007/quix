@@ -1,13 +1,12 @@
 import React from "react";
-import Quizes from "./Quizes";
+import QuizContainer from "./QuizContainer";
 
 const Body = () => {
   return (
     <div>
-      <Quizes />
-      <Quizes />
-      <Quizes />
-      <Quizes />
+     <QuizContainer />
+     <QuizContainer />
+     <QuizContainer />
     </div>
   );
 };

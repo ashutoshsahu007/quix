@@ -1,3 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+  height: 100vh;
+  background-image: linear-gradient(#d8c7ff, #19006c);
+  font-family: "poppins";
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.correct {
+  background: #dffff2;
+  border-color: #00d397;
+}
+
+.wrong {
+  background: #ffebeb;
+  border-color: #ff4a4a;
+}

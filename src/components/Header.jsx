@@ -1,16 +1,20 @@
 import React from "react";
+import classes from "./Header.module.css"
 
 const Header = () => {
   return (
-    <div className="flex justify-between bg-blue-600 w-full ">
-      <div>
+    <div className={classes.header}>
+      <div className={classes.quizard}>
         <h1>QUIZARD</h1>
       </div>
-      <div className="flex justify-evenly">
-        <p>Live Quiz</p>
-        <p>Grade 7</p>
-        <p>Login</p>
-        <p>Register</p>
+      <div className={classes.headerlist}>
+        <ul className={classes.list}>
+        <li>Live Quiz</li>
+        <li>Grade 7</li>
+        <li>Login</li>
+        <li>Register</li>
+        </ul>
+       
       </div>
     </div>
   );

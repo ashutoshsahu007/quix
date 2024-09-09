@@ -1,21 +1,10 @@
 import React from "react";
-import Quiz from "./Quiz";
+import classes from "./Quizes.module.css"
 
 const Quizes = () => {
-  return (
-    <div>
-      <div>
-        <h1>Physics</h1>
-        <Quiz />
-        <Quiz />
-        <Quiz />
-        <Quiz />
-        <Quiz />
-        <Quiz />
-        <Quiz />
-      </div>
-    </div>
-  );
+  return <div className={classes.quiz}>
+    <img src="public\ScienceQuiz.png" alt="not allowed" />
+  </div>;
 };
 
 export default Quizes;

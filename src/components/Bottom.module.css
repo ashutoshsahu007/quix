@@ -1,0 +1,12 @@
+.list{
+   display: flex;
+   justify-content: space-around;
+}
+.bottom{
+    background-color: rgb(6 182 212);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

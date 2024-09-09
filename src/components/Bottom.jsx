@@ -1,19 +1,22 @@
 import React from "react";
+import classes from "./Bottom.module.css";
 
 const Bottom = () => {
   return (
-    <div className="bg-orange-900 flex justify-evenly">
+    <div className={classes.bottom}>
       <div>
         <p>Quizard © Copyright 2024 . All rights reserved.</p>
       </div>
       <div>
-        <ul className="flex justify-evenly">
+       
+          <ul className={classes.list}>
           <li> About Us</li>
           <li> Contact Us</li>
           <li>Privacy & Cookies Policy</li>
           <li> Terms and Conditions</li>
           <li> Disclaimer</li>
-        </ul>
+          </ul>
+        
       </div>
     </div>
   );
