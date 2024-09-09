@@ -8,10 +8,9 @@ import Quiz from "./components/Quiz";
 const App = () => {
   return (
     <div className="text-black">
-      {/* <Header /> */}
-      {/* <Body /> */}
-      <Quiz />
-      {/* <Bottom /> */}
+      <Header />
+      <Body />
+      <Bottom />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import Quiz from "./Quiz";
-// import classes from "./QuizContainer.module.css";
+import classes from "./QuizContainer.module.css";
 import Quizes from "./Quizes";
 
 const QuizContainer = () => {
@@ -9,9 +9,9 @@ const QuizContainer = () => {
       <div>
         <h1>Physics</h1>
         <div className={classes.quizlist}>
-        <Quizes />
-        <Quizes />
-        <Quizes />
+          <Quizes />
+          <Quizes />
+          <Quizes />
         </div>
       </div>
     </div>
