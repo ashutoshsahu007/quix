@@ -10,8 +10,7 @@ const Header = () => {
       <div className={classes.headerlist}>
         <ul className={classes.list}>
           <li>Live Quiz</li>
-          <li>Profile</li>
-          <li>Grade 7</li>
+          <li>Default</li>
           <li>Login</li>
           <li>Register</li>
         </ul>

@@ -2,6 +2,7 @@ import React from "react";
 import Quiz from "./Quiz";
 import classes from "./QuizContainer.module.css";
 import Quizes from "./Quizes";
+import { Link } from "react-router-dom";
 
 const QuizContainer = () => {
   return (
@@ -9,9 +10,18 @@ const QuizContainer = () => {
       <div>
         <h1>Physics</h1>
         <div className={classes.quizlist}>
-          <Quizes />
-          <Quizes />
-          <Quizes />
+          <Link to="/quiz">
+            <Quizes />
+          </Link>
+          <Link to="/quiz">
+            <Quizes />
+          </Link>
+          <Link to="/quiz">
+            <Quizes />
+          </Link>
+          <Link to="/quiz">
+            <Quizes />
+          </Link>
         </div>
       </div>
     </div>

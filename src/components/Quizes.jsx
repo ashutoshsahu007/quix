@@ -7,8 +7,13 @@ const Quizes = () => {
       <img
         src="ScienceQuiz.png"
         alt="not allowed"
-        style={{ width: "256px", height: "160px" }}
+        style={{
+          width: "256px",
+          height: "160px",
+          borderRadius: "10px 10px 0px 0px",
+        }}
       />
+      <h3> Computer Class Basic Questions </h3>
     </div>
   );
 };
