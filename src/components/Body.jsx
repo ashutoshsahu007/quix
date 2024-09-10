@@ -6,7 +6,7 @@ const Body = () => {
   return (
     <div className={classes.main}>
       <div className={classes.div1}>
-        <div>
+        <div style={{ width: "80%" }}>
           <img
             src="kid.png"
             alt="image not found"

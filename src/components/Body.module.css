@@ -1,6 +1,10 @@
 .div1 {
   background-color: rgb(47, 193, 215);
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: "40%";
+  height: 400px;
 }
 .main {
   padding: 70px;
