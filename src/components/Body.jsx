@@ -6,19 +6,19 @@ const Body = () => {
   return (
     <div className={classes.main}>
       <div className={classes.div1}>
-        <div style={{ width: "50%" }}>
+        <div>
           <img
             src="kid.png"
             alt="image not found"
             style={{ width: "145px", height: "128px" }}
           />
         </div>
-        <div>
+        <div className={classes.sec}>
           <div>
             <h1>Play Quiz</h1>
           </div>
           <div>
-            <p style={{ fontFamily: "poppins" }}>
+            <p>
               Welcome to Quizard, where knowledge meets fun! Unleash your
               intellect with our captivating quizzes spanning various topics.
               Challenge yourself, compete with friends, and embark on a journey
@@ -28,11 +28,30 @@ const Body = () => {
             </p>
           </div>
           <div>
-            <button>Start Quiz</button>
+            <button
+              style={{
+                background: "yellow",
+                width: "100px",
+                height: "40px",
+                fontSize: "15px",
+                borderRadius: "5px",
+              }}
+            >
+              Start Quiz
+            </button>
           </div>
         </div>
       </div>
-      <div>
+      <div className={classes.quizcontainer}>
+        <QuizContainer />
+        <QuizContainer />
+        <QuizContainer />
+        <QuizContainer />
+        <QuizContainer />
+        <QuizContainer />
+        <QuizContainer />
+        <QuizContainer />
+        <QuizContainer />
         <QuizContainer />
         <QuizContainer />
         <QuizContainer />

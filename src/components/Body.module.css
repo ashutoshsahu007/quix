@@ -2,14 +2,29 @@
   background-color: rgb(47, 193, 215);
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: "40%";
+  justify-content: space-evenly;
   height: 400px;
   color: white;
-  line-height: 20px;
-  font-size: 25px;
-  font-family: "poppins";
+  line-height: 30px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-top: 40px;
+  margin-right: auto;
+  width: "100%";
 }
 .main {
-  padding: 70px;
+  padding: "100px";
+  width: "100%";
+}
+
+.quizcontainer {
+  padding: 90px;
+}
+.sec {
+  /* margin: 300px; */
+  width: 400px;
+}
+
+.sec div {
+  margin: 15px;
 }

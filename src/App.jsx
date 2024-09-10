@@ -5,6 +5,7 @@ import Body from "./components/Body";
 import Bottom from "./components/Bottom";
 import Quiz from "./components/Quiz";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import About from "./components/About";
 
 const App = () => {
   const appRouter = createBrowserRouter([
@@ -15,6 +16,10 @@ const App = () => {
     {
       path: "/quiz",
       element: <Quiz />,
+    },
+    {
+      path: "/about",
+      element: <About />,
     },
   ]);
   return (
