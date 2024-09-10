@@ -28,3 +28,14 @@
 .sec div {
   margin: 15px;
 }
+
+@media only screen and (max-width: 600px) {
+  .div1 {
+    display: block;
+    height: 500px;
+    margin: 50px auto auto 0px;
+  }
+  .secc {
+    width: auto;
+  }
+}

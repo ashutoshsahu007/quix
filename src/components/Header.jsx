@@ -11,11 +11,11 @@ const Header = () => {
       </div>
       <div className={classes.headerlist}>
         <ul className={classes.list}>
-          <li>Live Quiz</li>
-          <li>Default</li>
-          <li>Login</li>
-          <li>Register</li>
-          <li>Score : {score}</li>
+          <li className={classes.item}>Live Quiz</li>
+          <li className={classes.item}>Default</li>
+          <li className={classes.item}>Login</li>
+          <li className={classes.item}>Register</li>
+          <li className={classes.score}>Score : {score}</li>
         </ul>
       </div>
     </div>

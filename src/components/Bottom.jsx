@@ -4,7 +4,7 @@ import classes from "./Bottom.module.css";
 const Bottom = () => {
   return (
     <div className={classes.bottom}>
-      <div>
+      <div className={classes.para}>
         <p style={{ color: "white" }}>
           Quizard © Copyright 2024 . All rights reserved.
         </p>
