@@ -5,6 +5,10 @@
   justify-content: space-around;
   width: "40%";
   height: 400px;
+  color: white;
+  line-height: 20px;
+  font-size: 25px;
+  font-family: "poppins";
 }
 .main {
   padding: 70px;
