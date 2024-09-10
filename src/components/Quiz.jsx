@@ -113,7 +113,7 @@ const Quiz = () => {
       {result ? (
         <>
           <h2>
-            your Score is {score} out of {data.length}{" "}
+            your Score is {score * 4} out of {data.length * 4}
           </h2>
           <button
             onClick={() => {

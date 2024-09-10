@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Quizes.module.css";
 
-const Quizes = () => {
+const Quizes = ({ name }) => {
   return (
     <div className={classes.quizes}>
       <img
@@ -13,7 +13,7 @@ const Quizes = () => {
           borderRadius: "10px 10px 0px 0px",
         }}
       />
-      <h3> Computer Class Basic Questions </h3>
+      <h3> {name} </h3>
     </div>
   );
 };
