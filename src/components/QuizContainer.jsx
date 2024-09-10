@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const QuizContainer = ({ item }) => {
   const { heading, subject1, subject2, subject3, subject4 } = item;
-  console.log(item);
+
   return (
     <div className={classes.quizes}>
       <div>
