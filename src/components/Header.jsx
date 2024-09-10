@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Header.module.css";
+import { ScoreProvider } from "../App";
 
 const Header = () => {
+  const { score, setScore } = useContext(ScoreProvider);
   return (
     <div className={classes.header}>
       <div className={classes.quizard}>
@@ -13,6 +15,7 @@ const Header = () => {
           <li>Default</li>
           <li>Login</li>
           <li>Register</li>
+          <li>Score : {score}</li>
         </ul>
       </div>
     </div>

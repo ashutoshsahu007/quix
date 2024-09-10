@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import "./index.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -7,7 +7,10 @@ import Quiz from "./components/Quiz";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About";
 
+export const ScoreProvider = createContext(null);
+
 const App = () => {
+  const [score, setScore] = useState(0);
   const appRouter = createBrowserRouter([
     {
       path: "/",
@@ -23,11 +26,13 @@ const App = () => {
     },
   ]);
   return (
-    <div className="text-black" style={{ position: "relative" }}>
-      <Header />
-      <RouterProvider router={appRouter} />
-      <Bottom />
-    </div>
+    <ScoreProvider.Provider value={{ score, setScore }}>
+      <div className="text-black" style={{ position: "relative" }}>
+        <Header />
+        <RouterProvider router={appRouter} />
+        <Bottom />
+      </div>
+    </ScoreProvider.Provider>
   );
 };
 

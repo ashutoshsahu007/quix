@@ -1,6 +1,7 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
 import classes from "./Quiz.module.css";
 import { data } from "../assets/data.jsx";
+import { ScoreProvider } from "../App.jsx";
 
 const Quiz = () => {
   const [index, setIndex] = useState(0);
@@ -8,6 +9,8 @@ const Quiz = () => {
   const [lock, setLock] = useState(false);
   const [score, setStore] = useState(0);
   let [result, setResult] = useState(false);
+  const { score: finalScore, setScore: finalSetScore } =
+    useContext(ScoreProvider);
 
   const Option1 = useRef(null);
   const Option2 = useRef(null);
@@ -22,6 +25,7 @@ const Quiz = () => {
         e.target.classList.add("correct");
         setLock(true);
         setStore((prev) => prev + 1);
+        finalSetScore(finalScore + 4);
       } else {
         e.target.classList.add("wrong");
         setLock(true);
@@ -111,7 +115,14 @@ const Quiz = () => {
           <h2>
             your Score is {score} out of {data.length}{" "}
           </h2>
-          <button onClick={reset}>Reset</button>
+          <button
+            onClick={() => {
+              reset();
+              finalSetScore(0);
+            }}
+          >
+            Reset
+          </button>
         </>
       ) : (
         <></>
