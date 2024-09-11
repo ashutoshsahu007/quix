@@ -1,10 +1,9 @@
 .div1 {
-  background-color: rgb(47, 193, 215);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 400px;
-  color: white;
+  color: black;
   line-height: 30px;
   font-size: 20px;
   margin-left: auto;
@@ -13,8 +12,9 @@
   width: "100%";
 }
 .main {
-  padding: "100px";
+  /* padding: "100px"; */
   width: "100%";
+  background-color: red;
 }
 
 .quizcontainer {
@@ -36,6 +36,6 @@
     margin: 50px auto auto 0px;
   }
   .secc {
-    width: auto;
+    /* width: auto; */
   }
 }
