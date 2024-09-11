@@ -1,4 +1,4 @@
-import { useRef, useState, useContext } from "react";
+import { useRef, useState, useContext, useEffect } from "react";
 import classes from "./Quiz.module.css";
 import { data } from "../assets/data.jsx";
 import { ScoreProvider } from "../App.jsx";
@@ -7,8 +7,9 @@ const Quiz = () => {
   const [index, setIndex] = useState(0);
   const [question, setQuestion] = useState(data[index]);
   const [lock, setLock] = useState(false);
-  const [score, setStore] = useState(0);
+  const [score, setScore] = useState(0);
   let [result, setResult] = useState(false);
+  const [seconds, setSeconds] = useState(10);
   const { score: finalScore, setScore: finalSetScore } =
     useContext(ScoreProvider);
 
@@ -19,12 +20,33 @@ const Quiz = () => {
 
   const option_array = [Option1, Option2, Option3, Option4];
 
+  useEffect(() => {
+    // Start a timer that updates every second
+    const intervalId = setInterval(() => {
+      setSeconds((prevSeconds) => {
+        if (prevSeconds <= 1) {
+          // Stop the timer if the countdown is complete
+          clearInterval(intervalId);
+          return 0;
+        }
+        return prevSeconds - 1;
+      });
+    }, 1000);
+
+    // Cleanup on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
+  // Convert seconds to minutes and seconds for display
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+
   const checkAns = (e, ans) => {
     if (lock === false) {
       if (question.ans === ans) {
         e.target.classList.add("correct");
         setLock(true);
-        setStore((prev) => prev + 1);
+        setScore((prev) => prev + 1);
         finalSetScore(finalScore + 4);
       } else {
         e.target.classList.add("wrong");
@@ -35,14 +57,17 @@ const Quiz = () => {
   };
 
   const next = () => {
+    console.log("outer");
     if (lock === true) {
       if (index === data.length - 1) {
         setResult(true);
+        console.log("if");
         return 0;
       }
       setIndex(index + 1);
       setQuestion(data[index]);
       setLock(false);
+      console.log("elese");
       option_array.map((option) => {
         option.current.classList.remove("wrong");
         option.current.classList.remove("correct");
@@ -54,14 +79,30 @@ const Quiz = () => {
   const reset = () => {
     setIndex(0);
     setQuestion(data[0]);
-    setStore(0);
+    setScore(0);
     setLock(false);
     setResult(false);
   };
 
+  if (remainingSeconds === 0) {
+  }
+
   return (
     <div className={classes.container}>
-      <h1>Quiz App</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <h1>Quiz App</h1>
+        <p>
+          0{minutes}:
+          {remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds}
+        </p>
+      </div>
+
       <hr />
       {result ? (
         <></>
