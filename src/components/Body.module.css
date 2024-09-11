@@ -34,17 +34,29 @@
 
 @media only screen and (max-width: 600px) {
   .div1 {
-    display: block;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
     margin: 50px auto auto 0px;
+  }
+  .sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 @media only screen and (max-width: 400px) {
   .div1 {
-    height: 560px;
+    height: 650px;
   }
   .sec {
     width: "300px";
   }
+}
+.para {
+  text-align: justify;
+  text-justify: inter-word;
 }
