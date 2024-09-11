@@ -1,10 +1,12 @@
 .quizes {
+  display: flex;
+  justify-content: center;
 }
 
 .quizlist {
   display: flex;
-  gap: 20px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
