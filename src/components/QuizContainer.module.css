@@ -16,6 +16,6 @@
 
 @media only screen and (max-width: 550px) {
   .quizes {
-    padding: auto;
+    padding: 10px 40px 10px 40px;
   }
 }
