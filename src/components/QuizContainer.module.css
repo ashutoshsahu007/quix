@@ -14,8 +14,8 @@
   margin-bottom: 15px;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 330px) {
   .quizes {
-    padding: 10px 30px 10px 40px;
+    padding: 10px 10px 10px 40px;
   }
 }
