@@ -6,6 +6,8 @@ import Bottom from "./components/Bottom";
 import Quiz from "./components/Quiz";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About";
+import Start from "./components/Start";
+import Results from "./components/Results";
 
 export const ScoreProvider = createContext(null);
 
@@ -19,6 +21,14 @@ const App = () => {
     {
       path: "/quiz",
       element: <Quiz />,
+    },
+    {
+      path: "/start",
+      element: <Start />,
+    },
+    {
+      path: "/results",
+      element: <Results />,
     },
     {
       path: "/about",

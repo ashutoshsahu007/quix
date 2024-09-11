@@ -130,7 +130,7 @@ const Body = () => {
             </p>
           </div>
           <div>
-            <Link to="/quiz">
+            <Link to="/start">
               <button
                 style={{
                   background: "yellow",

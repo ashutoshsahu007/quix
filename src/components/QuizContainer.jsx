@@ -12,16 +12,16 @@ const QuizContainer = ({ item }) => {
       <div>
         <h1>{heading}</h1>
         <div className={classes.quizlist}>
-          <Link to="/quiz">
+          <Link to="/start">
             <Quizes name={subject1} />
           </Link>
-          <Link to="/quiz">
+          <Link to="/start">
             <Quizes name={subject2} />
           </Link>
-          <Link to="/quiz">
+          <Link to="/start">
             <Quizes name={subject3} />
           </Link>
-          <Link to="/quiz">
+          <Link to="/start">
             <Quizes name={subject4} />
           </Link>
         </div>

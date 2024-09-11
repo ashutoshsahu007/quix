@@ -1,7 +1,7 @@
 body {
   height: 100vh;
   /* background-image: linear-gradient(#d8c7ff, #19006c); */
-  font-family: "poppins";
+  font-family: "Poppins", sans-serif;
 }
 * {
   margin: 0px;
