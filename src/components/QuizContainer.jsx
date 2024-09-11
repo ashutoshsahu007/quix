@@ -10,7 +10,7 @@ const QuizContainer = ({ item }) => {
   return (
     <div className={classes.quizes}>
       <div>
-        <h1 style={{ margin: "10px 0px" }}>{heading}</h1>
+        <h1 style={{ padding: "auto" }}>{heading}</h1>
         <div className={classes.quizlist}>
           <Link to="/quiz">
             <Quizes name={subject1} />

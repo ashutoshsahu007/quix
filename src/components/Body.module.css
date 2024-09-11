@@ -1,7 +1,6 @@
 .div1 {
   display: flex;
-  /* background-color: rgb(158, 225, 235); */
-  border: 1px solid red;
+  background-color: rgb(158, 225, 235);
   align-items: center;
   justify-content: space-evenly;
   height: 400px;
