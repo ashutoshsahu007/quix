@@ -10,11 +10,11 @@ body {
 }
 
 .correct {
-  background: #dffff2;
-  border-color: #00d397;
+  background: #7bd9b3;
+  border-color: #6eceb3;
 }
 
 .wrong {
-  background: #ffebeb;
-  border-color: #ff4a4a;
+  background: hsl(0, 56%, 67%);
+  border-color: #c46262;
 }

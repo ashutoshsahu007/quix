@@ -53,11 +53,11 @@
 }
 
 .correct {
-  background: #dffff2;
+  background: #75eebd;
   border-color: #00d397;
 }
 
 .wrong {
-  background: #ffebeb;
+  background: #f21d1d;
   border-color: #ff4a4a;
 }

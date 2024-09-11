@@ -9,7 +9,7 @@ const Quiz = () => {
   const [lock, setLock] = useState(false);
   const [score, setScore] = useState(0);
   let [result, setResult] = useState(false);
-  const [seconds, setSeconds] = useState(10);
+  const [seconds, setSeconds] = useState(59);
   const { score: finalScore, setScore: finalSetScore } =
     useContext(ScoreProvider);
 
@@ -35,7 +35,7 @@ const Quiz = () => {
 
     // Cleanup on component unmount
     return () => clearInterval(intervalId);
-  }, []);
+  });
 
   // Convert seconds to minutes and seconds for display
   const minutes = Math.floor(seconds / 60);
@@ -57,23 +57,39 @@ const Quiz = () => {
   };
 
   const next = () => {
-    console.log("outer");
     if (lock === true) {
       if (index === data.length - 1) {
         setResult(true);
-        console.log("if");
+        setSeconds(59);
         return 0;
       }
       setIndex(index + 1);
       setQuestion(data[index]);
       setLock(false);
-      console.log("elese");
+      setSeconds(59);
+
       option_array.map((option) => {
         option.current.classList.remove("wrong");
         option.current.classList.remove("correct");
         return null;
       });
     }
+  };
+
+  const next2 = () => {
+    if (index === data.length - 1) {
+      setResult(true);
+      return 0;
+    }
+    setIndex(index + 1);
+    setQuestion(data[index]);
+    setLock(false);
+
+    option_array.map((option) => {
+      option.current.classList.remove("wrong");
+      option.current.classList.remove("correct");
+      return null;
+    });
   };
 
   const reset = () => {
@@ -85,12 +101,8 @@ const Quiz = () => {
   };
 
   if (remainingSeconds === 0) {
-    setSeconds(10);
-    setLock(true);
-    setTimeout(() => {
-      console.log(lock);
-      next();
-    }, 5000);
+    next2();
+    setSeconds(59);
   }
 
   return (
@@ -103,10 +115,12 @@ const Quiz = () => {
         }}
       >
         <h1>Quiz App</h1>
-        <p>
-          0{minutes}:
-          {remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds}
-        </p>
+        {!result && (
+          <p>
+            0{minutes}:
+            {remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds}
+          </p>
+        )}
       </div>
 
       <hr />
