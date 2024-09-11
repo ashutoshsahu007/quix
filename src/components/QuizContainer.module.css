@@ -1,10 +1,9 @@
 .quizes {
-  margin-top: 5px;
 }
 
 .quizlist {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
