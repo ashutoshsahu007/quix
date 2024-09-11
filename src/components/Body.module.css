@@ -3,7 +3,7 @@
   background-color: rgb(158, 225, 235);
   align-items: center;
   justify-content: space-evenly;
-  height: 450px;
+  height: 400px;
   color: black;
   line-height: 30px;
   font-size: 20px;
@@ -40,6 +40,9 @@
 }
 
 @media only screen and (max-width: 400px) {
+  .div1 {
+    height: 600px;
+  }
   .sec {
     width: "300px";
   }
