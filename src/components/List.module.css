@@ -8,3 +8,9 @@
   height: 30px;
   align-items: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .list {
+    width: 300px;
+  }
+}
