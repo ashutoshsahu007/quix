@@ -2,6 +2,7 @@ import { useRef, useState, useContext, useEffect } from "react";
 import classes from "./Quiz.module.css";
 import { data } from "../assets/data.jsx";
 import { ScoreProvider } from "../App.jsx";
+import { Link } from "react-router-dom";
 
 const Quiz = () => {
   const [index, setIndex] = useState(0);
@@ -183,6 +184,14 @@ const Quiz = () => {
             }}
           >
             Reset
+          </button>
+          <button>
+            <Link
+              to="/results"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Show Results
+            </Link>
           </button>
         </>
       ) : (

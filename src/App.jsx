@@ -10,7 +10,7 @@ import Start from "./components/Start";
 import Results from "./components/Results";
 import LeaderBoard from "./components/LeaderBoard";
 
-export const ScoreProvider = createContext(null);
+export const ScoreProvider = createContext(0);
 
 const App = () => {
   const [score, setScore] = useState(0);

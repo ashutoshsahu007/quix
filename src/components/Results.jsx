@@ -5,16 +5,17 @@ import { ScoreProvider } from "../App";
 import { Link } from "react-router-dom";
 
 const Results = () => {
-  const { finalScore, finalSetScore } = useContext(ScoreProvider);
+  const { score, setScore } = useContext(ScoreProvider);
+
   return (
     <div className={classes.result}>
       <div className={classes.divs}>
         <p>Coin Earned</p>
-        <p>45</p>
+        <p>{score}</p>
       </div>
       <div className={classes.divs}>
         <p>Your Score</p>
-        <p>45</p>
+        <p>{score}</p>
       </div>
       <div className={classes.divs}>
         <p>correct</p>
@@ -37,7 +38,12 @@ const Results = () => {
         <p>12sec</p>
       </div>
       <div className={classes.button}>
-        <Link to="/leaderboard"> Leaderboard</Link>
+        <Link
+          to="/leaderboard"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          Leaderboard
+        </Link>
       </div>
     </div>
   );

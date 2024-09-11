@@ -20,15 +20,21 @@ const Start = () => {
       </div>
       <div className={classes.question}>10 Questions </div>
       <div className={classes.play}>
-        <Link to="/quiz">Play again</Link>
+        <Link to="/quiz" style={{ color: "white", textDecoration: "none" }}>
+          Play again
+        </Link>
       </div>
       <div>
         <button className={classes.play_again}>
-          <Link to="/quiz">Play With Friends </Link>
+          <Link to="/quiz" style={{ color: "white", textDecoration: "none" }}>
+            Play With Friends
+          </Link>
         </button>
       </div>
       <div className={classes.result}>
-        <Link to="/results">See Results</Link>
+        <Link to="/results" style={{ color: "white", textDecoration: "none" }}>
+          See Results
+        </Link>
       </div>
     </div>
   );
