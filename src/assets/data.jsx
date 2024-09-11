@@ -42,11 +42,9 @@ export const data = [
   },
   {
     question: "Which of the following is true for variable names in C?",
-    option1:
-      "They can contain alphanumeric characters as well as special characters",
-    option2:
-      "It is not an error to declare a variable to be one of the keywords(like goto, static)",
-    option3: "Variable names cannot start with a digit",
+    option1: "They can contain alphanumeric characters ",
+    option2: "It is not an error to declare a variable to",
+    option3: "Variable names cannot start with",
     option4: "Variable can be of any length",
     ans: 3,
   },
