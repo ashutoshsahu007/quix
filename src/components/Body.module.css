@@ -1,6 +1,7 @@
 .div1 {
   display: flex;
-  background-color: rgb(158, 225, 235);
+  /* background-color: rgb(158, 225, 235); */
+  border: 1px solid red;
   align-items: center;
   justify-content: space-evenly;
   height: 400px;
@@ -18,11 +19,13 @@
 }
 
 .quizcontainer {
-  padding: 30px 90px 90px 90px;
+  /* padding: 30px 90px 90px 0px; */
+  margin-left: auto;
+  margin-right: auto;
 }
 .sec {
   /* margin: 300px; */
-  width: 400px;
+  width: fit-content;
 }
 
 .sec div {
@@ -35,7 +38,10 @@
     height: 500px;
     margin: 50px auto auto 0px;
   }
-  .secc {
-    /* width: auto; */
+}
+
+@media only screen and (max-width: 400px) {
+  .sec {
+    width: "300px";
   }
 }

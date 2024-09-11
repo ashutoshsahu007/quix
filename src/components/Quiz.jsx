@@ -85,6 +85,12 @@ const Quiz = () => {
   };
 
   if (remainingSeconds === 0) {
+    setSeconds(10);
+    setLock(true);
+    setTimeout(() => {
+      console.log(lock);
+      next();
+    }, 5000);
   }
 
   return (

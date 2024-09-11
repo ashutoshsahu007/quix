@@ -13,7 +13,7 @@ const Quizes = ({ name }) => {
           borderRadius: "10px 10px 0px 0px",
         }}
       />
-      <h3 style={{ marginLeft: "10px" }}> {name} </h3>
+      <h3 style={{ marginLeft: "0px" }}> {name} </h3>
     </div>
   );
 };
