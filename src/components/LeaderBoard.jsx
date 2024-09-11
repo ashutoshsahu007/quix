@@ -20,15 +20,14 @@ const LeaderBoard = () => {
     setLoad(load + 10);
   };
 
-  console.log(arrayOfObjects);
   return (
     <div className={classes.leaderboard}>
-      <div>
+      <div className={classes.heading}>
         <h1>LeaderBoard</h1>
       </div>
       <div>
         {arrayOfObjects.map((item) => {
-          return <List item={item} />;
+          return <List key={item.listNumber} item={item} />;
         })}
       </div>
       <div onClick={handleClick} className={classes.load}>
